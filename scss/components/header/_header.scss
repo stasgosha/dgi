@@ -1,0 +1,418 @@
+.header{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+	background: #fff;
+	padding-left: calc(100% / 24 * 1);
+
+	.header-inner{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: calc(100% + 15px * 2);
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+
+	.header-block{
+		padding: 0 15px;
+	}
+
+	.header-left{
+		display: flex;
+		align-items: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		transition: padding $t;
+	}
+
+	.header-right{
+		display: flex;
+		align-items: stretch;
+		align-self: stretch;
+	}
+
+	.logo-block{
+		margin-right: 120px;
+	}
+
+	&:not(.dark).sticky{
+		box-shadow: 0 1px 0 #F1F1F1;
+	}
+
+	@media screen and (max-width: 991px){
+		padding: 0 20px;
+
+		.logo-block{
+			margin-right: 0;
+		}
+
+		&.sticky{
+			.header-left{
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+		}
+	}
+
+	&.dark{
+		background: #00142e;
+
+		--header-main-color: #fff;
+	}
+
+	&.nav-opened{
+		// background: $dark;
+
+		// .menu-opener{
+		// 	--bar-fill: #fff;
+		// }
+	}
+}
+
+.top-nav{
+	ul{
+		display: flex;
+		@include p-small;
+		color: var(--header-main-color, #{ $text-dark });
+
+		li{
+			margin-right: 40px;
+
+			&:last-child{
+				margin-right: 0;
+			}
+
+			a{
+				color: inherit;
+
+				&:hover,
+				&:focus{
+					outline: none;
+					color: $primary;
+				}
+			}
+
+			&.current-menu-item,
+			&.current-menu-parent{
+				a{
+					font-weight: bold;
+					color: $primary;
+				}
+			}
+			
+			&.current-menu-item{
+				a{
+					cursor: default;
+				}
+			}
+		}
+	}
+}
+
+.logo-block{
+	display: block;
+
+	img{
+		display: block;
+		height: 40px;
+		width: auto;
+	}
+}
+
+.header-search-form{
+	display: flex;
+	align-items: center;
+	color: var(--header-main-color, #{ $text-dark });
+	transition: all $t;
+	padding-left: 28px;
+	padding-right: 20px;
+
+	@media screen and (min-width: 992px){
+		&:focus-within{
+			color: #fff;
+			background: $dark;
+		}
+	}
+
+	.form-inner{
+		position: relative;
+		display: flex;
+		align-items: center;
+		transition: all $t;
+
+		.search-icon,
+		.search-close .btn-icon{
+			width: 24px;
+			height: 24px;
+			fill: currentcolor;
+			display: block;
+			flex: none;
+		}
+
+		.search-icon{
+			margin-right: 8px;
+		}
+
+		.search-close{
+			margin-right: 24px;
+			width: 24px;
+			height: 24px;
+			color: #fff;
+		}
+
+		.search-field{
+			width: 50px;
+			transition: width $t;
+			height: 40px;
+			@include p-small;
+			color: inherit;
+			display: block;
+			border: 0;
+			outline: none;
+			background: transparent;
+
+			&::placeholder{
+				opacity: 1;
+				color: inherit;
+			}
+		}
+
+		.search-btn{
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex: none;
+
+			&:after{
+				content: '';
+				display: block;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 6px 0 6px 6px;
+				border-color: transparent transparent transparent #000;
+				transform: translateX(1px);
+			}
+
+			&:hover,
+			&:focus{
+				background: $primary;
+			}
+		}
+
+		.form-controls{
+			width: 0;
+			margin-left: 8px;
+			transition: all $t;
+			opacity: 0;
+			visibility: hidden;
+			display: flex;
+			align-items: center;
+		}
+
+		@media screen and (min-width: 992px){
+			&:focus-within{
+				.search-field{
+					width: 304px;
+				}
+
+				.form-controls{
+					width: 88px;
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		color: #fff;
+		background: $dark;
+		display: block;
+		padding: 20px;
+
+		.form-inner{
+			.search-field{
+				width: 100%;
+			}
+
+			.form-controls{
+				width: 40px;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}
+
+.header-contact-link{
+	display: flex;
+	align-items: center;
+	padding: 20px 44px;
+	background: $primary;
+	color: #fff;
+	@include p-small;
+	width: calc(100vw / 24 * 3);
+	min-width: 180px;
+	white-space: nowrap;
+	position: relative;
+	z-index: 2;
+
+	&:hover,
+	&:focus{
+		outline: none;
+		background: $accent;
+	}
+
+	.dark &{
+		background: #fff;
+		color: $text-dark;
+
+		&:hover,
+		&:focus{
+			background: $primary;
+			color: #fff;
+		}
+	}
+}
+
+.mobile-search-form-trigger{
+	width: 24px;
+	height: 24px;
+	display: block;
+
+	.btn-icon{
+		width: 100%;
+		height: 100%;
+		display: block;
+		fill: currentcolor;
+		transition: all $t;
+	}
+
+	.when-active,
+	.when-closed{
+		transition: all $t;
+	}
+
+	.when-active{
+		opacity: 0;
+	}
+
+	&.active{
+		.when-closed{
+			opacity: 0;
+		}
+
+		.when-active{
+			opacity: 1;
+		}
+	}
+
+	.dark &{
+		color: #fff;
+	}
+}
+
+.mobile-top-nav{
+	background: $primary;
+	color: #fff;
+	height: calc(100vh - 80px);
+	transition: all $t;
+	transform: translateY(30px);
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 100%;
+	z-index: 20;
+	overflow-y: auto;
+	overscroll-behavior-y: contain;
+
+	.sticky &{
+		height: calc(100vh - 60px);
+	}
+
+	.nav-content{
+		padding: 80px 40px 120px;
+
+		ul{
+			display: grid;
+			grid-gap: 30px;
+
+			li{
+				a{
+					@include h5;
+					color: #fff;
+					font-weight: bold;
+				}
+
+				&.current-menu-item,
+				&.current-menu-parent{
+					position: relative;
+
+					&:before{
+						content: '';
+						display: block;
+						width: 6px;
+						height: 6px;
+						border-radius: 50%;
+						background: #fff;
+						position: absolute;
+						left: -16px;
+						top: 0.6em;
+					}
+				}
+				
+				&.current-menu-item{
+					a{
+						cursor: default;
+					}
+				}
+			}
+		}
+	}
+
+	.language-select-block{
+		position: absolute;
+		left: 20px;
+		right: 20px;
+		bottom: 60px;
+		background: #fff;
+	}
+
+	&.opened{
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.mobile-search{
+	background: $dark;
+	transition: all $t;
+	transform: translateY(30px);
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 100%;
+	z-index: 20;
+	color: #fff;
+
+	--header-main-color: #fff;
+
+	&.opened{
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
+	}
+}

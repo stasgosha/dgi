@@ -1,0 +1,24 @@
+.job-page-first-screen{
+	margin-bottom: 80px;
+
+	.section-inner{
+		padding: var(--small-vertical-paddings) 0 80px;
+		display: grid;
+		border-bottom: 1px solid #DEDEDE;
+		grid-gap: 24px;
+	}
+
+	.container{
+		@media screen and (min-width: 1300px){
+			max-width: 1280px;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		margin-bottom: 40px;
+
+		.section-inner{
+			padding-bottom: 24px;
+		}
+	}
+}

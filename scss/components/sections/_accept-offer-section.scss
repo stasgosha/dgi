@@ -1,0 +1,55 @@
+.accept-offer-section{
+	padding: var(--small-vertical-paddings) 0;
+	background: #FAFAFA;
+
+	.section-caption{
+		max-width: 960px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 40px;
+	}
+}
+
+.accept-form{
+	width: 100%;
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+
+	form{
+		width: 100%;
+	}
+
+	.form-note{
+		margin-bottom: 80px;
+	}
+
+	.form-fields{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 60px 40px;
+
+		.wide{
+			grid-column: 1 / -1;
+		}
+	}
+
+	.form-footer{
+		margin-top: 60px;
+	}
+
+	.input-field,
+	textarea{
+		background: #fff !important;
+	}
+
+	@media screen and (max-width: 575px){
+		.form-fields{
+			grid-template-columns: 1fr;
+		}
+
+		.btn{
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,42 @@
+.contacts-section{
+	padding: 40px 0 var(--small-vertical-paddings);
+}
+
+.contacts-form{
+	width: 100%;
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+
+	form{
+		width: 100%;
+	}
+
+	.form-note{
+		margin-bottom: 80px;
+	}
+
+	.form-fields{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 60px 40px;
+
+		.wide{
+			grid-column: 1 / -1;
+		}
+	}
+
+	.form-footer{
+		margin-top: 60px;
+	}
+
+	@media screen and (max-width: 575px){
+		.form-fields{
+			grid-template-columns: 1fr;
+		}
+
+		.btn{
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+.error-section{
+	padding: var(--small-vertical-paddings) 0;
+
+	.section-image{
+		width: 240px;
+		margin: 0 auto 72px;
+
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}

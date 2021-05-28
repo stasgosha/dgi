@@ -1,0 +1,41 @@
+// Fonts
+$main-font: 'Helvetica', Arial, sans-serif;
+$second-font: 'Gotham', $main-font;
+
+// Colors
+$blue: #016FFF;
+$pink: #ED655F;
+
+$gray: #5A5A5A;
+$dark: #202020;
+$light: #BFBFBF;
+
+$text-color: $gray;
+$text-dark: $dark;
+$text-light: $light;
+
+$primary: $blue;
+$accent: $pink;
+
+:root{
+	--padding-1-columns: calc(100% / 24 * 1);
+	--padding-2-columns: calc(100% / 24 * 2);
+
+	--vertical-paddings: 160px;
+	--small-vertical-paddings: 120px;
+
+	@media screen and (max-width: 1399px){
+		--padding-2-columns: calc(100% / 24 * 1);
+	}
+
+	@media screen and (max-width: 991px){
+		--vertical-paddings: 80px;
+		--small-vertical-paddings: 80px;
+	}
+}
+
+// Params
+$body-bg: #fff; // site background
+$t: .3s; // animation duration
+$r: 0; // default border radius
+$shadow: unset; // default card shadow

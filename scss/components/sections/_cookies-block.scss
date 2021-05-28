@@ -1,0 +1,89 @@
+.cookies-block{
+	width: calc(100% - 64px * 2);
+	max-width: 1280px;
+	position: fixed;
+	left: 50%;
+	bottom: 24px;
+	padding: 28px 52px;
+	background: #fff;
+	z-index: 80;
+	color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	// box-shadow: 0 0 10px rgba(#000, .1);
+	border: 1px solid #dedede;
+	transform: translate(-50%, 100%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all $t;
+
+	&.visible{
+		transform: translate(-50%, 0);
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.block-content{
+		flex: auto;
+		margin-right: 90px;
+	}
+
+	.block-button{
+		flex: none;
+
+		.btn{
+			padding-left: 18px;
+			padding-right: 18px;
+		}
+	}
+
+	.block-close{
+		position: absolute;
+		left: calc(100% + 8px);
+		top: -12px;
+		width: 48px;
+		height: 48px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $text-dark;
+
+		.btn-icon{
+			width: 24px;
+			height: 24px;
+			fill: currentcolor;
+			display: block;
+		}
+
+		&:hover,
+		&:focus{
+			color: $primary;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		flex-direction: column;
+		width: 100%;
+		bottom: 0;
+		padding: 60px 20px 40px;
+		border: 0;
+
+		.block-content{
+			margin-right: 0;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		.block-button{
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 8px;
+
+			.btn{
+				width: 100%;
+			}
+		}
+	}
+}

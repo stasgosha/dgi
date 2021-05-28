@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Search | DGI</title>
+
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> -->
+	<link rel="stylesheet" href="css/slick.min.css">
+	<link rel="stylesheet" href="css/slick-theme.min.css">
+	<link rel="stylesheet" href="css/jcf.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body class="home">
+	<div class="wrapper" id="top">
+		<header class="header">
+			<div class="header-inner">
+				<div class="header-block md-visible">
+					<button class="menu-opener" aria-label="Открыть меню">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</button>
+				</div>
+				<div class="header-block header-left">
+					<a href="index.html" class="logo-block">
+						<img src="img/logo.svg" alt="Digital Global Investment">
+					</a>
+
+					<nav class="top-nav md-hidden">
+						<ul>
+							<li><a href="solutions.html">Решения</a></li>
+							<li><a href="about.html">Про нас</a></li>
+							<li><a href="careers.html">Карьера</a></li> 
+						</ul>
+					</nav>
+				</div>
+
+				<div class="header-block header-right md-hidden">
+					<div class="header-search-form">
+						<form action="">
+							<div class="form-inner">
+								<svg class="search-icon">
+									<use xlink:href="img/icons-sprite.svg#search"></use>
+								</svg>
+
+								<input type="text" class="search-field" placeholder="Поиск">
+
+								<div class="form-controls">
+									<button class="search-close" type="reset" aria-label="Очистить">
+										<svg class="btn-icon">
+											<use xlink:href="img/icons-sprite.svg#close"></use>
+										</svg>
+									</button>
+									<button class="search-btn" aria-label="Найти"></button>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<a href="contacts.html" class="header-contact-link">Написать нам</a>
+				</div>
+
+				<div class="header-block md-visible">
+					<button class="mobile-search-form-trigger">
+						<svg class="btn-icon">
+							<use xlink:href="img/icons-sprite.svg#search" class="when-closed"></use>
+							<use xlink:href="img/icons-sprite.svg#close" class="when-active"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+
+			<nav class="mobile-top-nav">
+				<div class="nav-content">
+					<ul>
+						<li><a href="solutions.html">Решения</a></li>
+						<li><a href="about.html">Про нас</a></li>
+						<li><a href="careers.html">Карьера</a></li> 
+						<li><a href="contacts.html">Контакты</a></li> 
+					</ul>
+				</div>
+
+				<div class="language-select-block">
+					<div class="block-select" tabindex="0">
+						<svg class="block-icon">
+							<use xlink:href="img/icons-sprite.svg#world"></use>
+						</svg>
+						<div class="block-text">Русский</div>
+						<svg class="block-opener">
+							<use xlink:href="img/icons-sprite.svg#arrow-down"></use>
+						</svg>
+					</div>
+					<ul class="languages-list">
+						<li><a href="#">English</a></li>
+						<li><a href="#">Polski</a></li>
+						<li><a href="#">中文</a></li>
+						<li><a href="#">Deutsch</a></li>
+						<li class="current"><a href="#">Русский</a></li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="mobile-search">
+				<div class="header-search-form">
+					<form action="">
+						<div class="form-inner">
+							<svg class="search-icon">
+								<use xlink:href="img/icons-sprite.svg#search"></use>
+							</svg>
+
+							<input type="text" class="search-field" placeholder="Поиск">
+
+							<div class="form-controls">
+								<button class="search-btn" aria-label="Найти"></button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</header>
+		<main class="page-content">
+			<section class="search-page-section">
+				<div class="container">
+					<div class="big-search-form">
+						<form action="">
+							<div class="form-inner">
+								<svg class="search-icon">
+									<use xlink:href="img/icons-sprite.svg#search"></use>
+								</svg>
+
+								<input type="text" class="search-field" placeholder="Поиск" value="Invest">
+
+								<div class="form-controls">
+									<!-- <button class="search-close" type="reset" aria-label="Очистить">
+										<svg class="btn-icon">
+											<use xlink:href="img/icons-sprite.svg#close"></use>
+										</svg>
+									</button> -->
+									<button class="search-btn" aria-label="Найти"></button>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<div class="search-results-component">
+						<div class="cmp-top">
+							<div class="cmp-count">
+								<p>Показывать <strong>1–10</strong> из <strong>20</strong>  результатов</p>
+							</div>
+
+							<div class="cmp-sort-by-block">
+								<p>Сортировать по</p>
+								<ul class="block-buttons-list">
+									<li><button class="sort-btn active">Релевантности</button></li>
+									<li><button class="sort-btn">Дате</button></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="cmp-content">
+							<div class="cmp-filter-by-block">
+								<h3 class="block-caption">Фильтровать результат по</h3>
+
+								<div class="block-form form">
+									<form action="">
+										<div class="form-field">
+											<p class="form-label">Темы</p>
+											<div class="select-field">
+												<select>
+													<option value="">Выбор темы</option>
+												</select>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<div class="cmp-results-list">
+								<div class="search-result-card">
+									<h3 class="card-caption">DGI Reports Fourth Quarter 2020 Earnings</h3>
+									<div class="card-text">
+										<p>As a major global financial institution, we consider the impacts that our business has on the environment and society. </p>
+									</div>
+									<div class="card-footer">
+										<a href="#" class="read-more-btn">
+											<span class="btn-text">Подробнее</span>
+										</a>
+									</div>
+								</div>
+
+								<div class="search-result-card">
+									<h3 class="card-caption">DGI Reports Fourth Quarter 2020 Earnings</h3>
+									<div class="card-text">
+										<p>As a major global financial institution, we consider the impacts that our business has on the environment and society. </p>
+									</div>
+									<div class="card-footer">
+										<a href="#" class="read-more-btn">
+											<span class="btn-text">Подробнее</span>
+										</a>
+									</div>
+								</div>
+
+								<div class="search-result-card last-with-bg">
+									<h3 class="card-caption">DGI Reports Fourth Quarter 2020 Earnings</h3>
+									<div class="card-text">
+										<p>As a major global financial institution, we consider the impacts that our business has on the environment and society. </p>
+									</div>
+									<div class="card-footer">
+										<a href="#" class="read-more-btn">
+											<span class="btn-text">Подробнее</span>
+										</a>
+									</div>
+								</div>
+
+								<div class="search-result-card no-bg">
+									<!-- Пример со ссылкой. Из дизайна не понятно как именно нужно сделать -->
+									<h3 class="card-caption"><a href="#">DGI Reports Fourth Quarter 2020 Earnings</a></h3>
+									<div class="card-text">
+										<p>As a major global financial institution, we consider the impacts that our business has on the environment and society. </p>
+									</div>
+								</div>
+
+								<div class="search-result-card no-bg">
+									<h3 class="card-caption">DGI Reports Fourth Quarter 2020 Earnings</h3>
+									<div class="card-text">
+										<p>As a major global financial institution, we consider the impacts that our business has on the environment and society. </p>
+									</div>
+								</div>
+							</div>
+
+							<div class="cmp-footer">
+								<div class="cmp-count">
+									<p>Показывать <strong>1–10</strong> из <strong>20</strong>  результатов</p>
+								</div>
+
+								<ol class="cmp-pagination">
+									<!-- <li><a href="#" aria-label="Предыдущая страница" class="prevnext prev"></a></li> -->
+									<li><a href="#" aria-label="Перейти на страницу 1" class="current">1</a></li>
+									<li><a href="#" aria-label="Перейти на страницу 2">2</a></li>
+									<li><a href="#" aria-label="Следующая страница" class="prevnext next"></a></li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer" role="contentinfo">
+			<div class="footer-row first">
+				<div class="footer-inner">
+					<div class="footer-block logo-wrapper">
+						<a href="index.html" class="logo-block">
+							<img src="img/logo-gray.svg" alt="Digital Global Investment">
+						</a>
+
+						<a href="#top" class="to-top-btn md-visible-flex">
+							<svg class="btn-icon">
+								<use xlink:href="img/icons-sprite.svg#arrow-up"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="footer-block md-visible">
+						<div class="language-select-block">
+							<div class="block-select" tabindex="0">
+								<svg class="block-icon">
+									<use xlink:href="img/icons-sprite.svg#world"></use>
+								</svg>
+								<div class="block-text">Русский</div>
+								<svg class="block-opener">
+									<use xlink:href="img/icons-sprite.svg#arrow-down"></use>
+								</svg>
+							</div>
+							<ul class="languages-list">
+								<li><a href="#">English</a></li>
+								<li><a href="#">Polski</a></li>
+								<li><a href="#">中文</a></li>
+								<li><a href="#">Deutsch</a></li>
+								<li class="current"><a href="#">Русский</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer-block">
+						<nav class="footer-nav">
+							<ul>
+								<li><a href="solutions.html">Решения</a></li>
+								<li><a href="about.html">Про нас</a></li>
+								<li><a href="careers.html">Карьера</a></li>
+								<li><a href="contacts.html">Контакты</a></li>
+							</ul>
+
+							<ul class="md-visible-grid">
+								<li><a href="privacy-policy.html">Политика приватности</a></li>
+								<li><a href="cookies-policy.html">Политика cookie-файлов</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer-block with-to-top md-hidden">
+						<ul class="footer-links">
+							<li><a href="privacy-policy.html">Политика приватности</a></li>
+							<li><a href="cookies-policy.html">Политика cookie-файлов</a></li>
+						</ul>
+
+						<a href="#top" class="to-top-btn">
+							<svg class="btn-icon">
+								<use xlink:href="img/icons-sprite.svg#arrow-up"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-row second">
+				<div class="footer-inner">
+					<div class="footer-block">
+						<ul class="socials-list">
+							<li>
+								<a href="#" target="_blank" rel="noopener nofollow" aria-label="linkedin">
+									<svg class="link-icon">
+										<use xlink:href="img/icons-sprite.svg#linkedin"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-block">
+						<p class="copyright">©2021 Все права защищены</p>
+					</div>
+					<div class="footer-block md-hidden">
+						<div class="language-select-block">
+							<div class="block-select" tabindex="0">
+								<svg class="block-icon">
+									<use xlink:href="img/icons-sprite.svg#world"></use>
+								</svg>
+								<div class="block-text">Русский</div>
+								<svg class="block-opener">
+									<use xlink:href="img/icons-sprite.svg#arrow-down"></use>
+								</svg>
+							</div>
+							<ul class="languages-list">
+								<li><a href="#">English</a></li>
+								<li><a href="#">Polski</a></li>
+								<li><a href="#">中文</a></li>
+								<li><a href="#">Deutsch</a></li>
+								<li class="current"><a href="#">Русский</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="cookies-block">
+		<button class="block-close js-close md-hidden">
+			<svg class="btn-icon" aria-label="Закрыть">
+				<use xlink:href="img/icons-sprite.svg#close"></use>
+			</svg>
+		</button>
+
+		<div class="block-content">
+			<p>Мы используем файлы cookie в соответствии с нашей политикой о файлах cookie. Пожалуйста, обратитесь к ней для получения дополнительной информации о том, как мы используем файлы cookie. Если вы даете согласие на использование файлов cookie, нажмите.</p>
+		</div>
+
+		<div class="block-button">
+			<button class="btn js-accept">Принять</button>
+			<button class="btn btn-light js-close md-visible-flex">Закрыть</button>
+		</div>
+	</div>
+
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script> -->
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script> -->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- <script src="//cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script> -->
+	<script src="js/slick.min.js"></script>
+	<script src="js/jcf.js"></script>
+	<script src="js/jcf.select.js"></script>
+	<script src="js/scripts.js"></script>
+	<!-- <script src="js/animations.js"></script> -->
+</body>
+</html>

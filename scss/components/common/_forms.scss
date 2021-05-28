@@ -1,0 +1,139 @@
+.form{
+	.input-field,
+	textarea,
+	.select-field select,
+	.select-field .jcf-select{
+		border: 1px solid #DEDEDE;
+		appearance: none;
+		background: transparent;
+		border-radius: 0;
+		flex: auto;
+		height: 56px;
+		font-size: inherit;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 1.333;
+		color: inherit;
+		font-family: inherit;
+		padding: 0 16px;
+		outline: none !important;
+		transition: all $t;
+		width: 100%;
+		box-shadow: none;
+
+		&::placeholder{
+			opacity: 1;
+			color: inherit;
+		}
+
+		&:focus{
+			border-color: $primary;
+		}
+
+		&.error{
+			border-color: #DB5366;
+		}
+	}
+
+	textarea{
+		resize: none;
+		padding: 16px;
+		height: 200px;
+		display: block;
+	}
+
+	.form-note,
+	.form-label{
+		@include p-small;
+		text-transform: uppercase;
+
+		&.no-uppercase{
+			text-transform: none;
+		}
+	}
+
+	.field-note{
+		@include p-small;
+		margin-top: 8px;
+	}
+
+	.form-label{
+		margin-bottom: 8px;
+	}
+
+	.field-error{
+		@include p-small;
+		color: $accent;
+	}
+}
+
+.jcf-select{
+	cursor: pointer;
+
+	.jcf-select-text{
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 56px;
+		padding: 0;
+		margin: 0;
+		cursor: pointer;
+		color: $text-dark;
+	}
+
+	.jcf-select-opener{
+		width: 56px;
+		height: 56px;
+		background: transparent;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+
+		&:after{
+			content: '';
+			display: block;
+			width: 24px;
+			height: 24px;
+			transition: all $t;
+			background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M24 0H0v24h24V0z' fill='none'/%3E%3Cpath d='M18.5 9l-6 6-6-6' stroke='%23202020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center center / contain;
+		}
+	}
+
+	&.jcf-drop-active{
+		.jcf-select-opener{
+			&:after{
+				transform: rotate(-180deg);
+			}
+		}
+	}
+}
+
+.jcf-select-drop{
+	border: 1px solid #DEDEDE;
+
+	ul{
+		li{
+
+		}
+	}
+
+	.jcf-list{
+		.jcf-option{
+			padding: 16px;
+			background: #fff;
+			font-size: 18px;
+			line-height: 1.3;
+			min-height: 56px;
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			color: $text-dark;
+
+			&:hover,
+			&:focus,
+			&.jcf-selected{
+				background: #DEDEDE;
+			}
+		}
+	}
+}

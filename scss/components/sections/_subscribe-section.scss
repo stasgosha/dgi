@@ -1,0 +1,75 @@
+.subscribe-section{
+	padding: 128px 0;
+	background: url(../img/backgrounds/subscribe-section-bg.jpg) no-repeat center center / cover;
+
+	.section-inner{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.section-content{
+		max-width: 560px;
+		margin-right: 80px;
+	}
+}
+
+.subscribe-form{
+	.form-inner{
+		height: 64px;
+		border-radius: 32px;
+		background: $dark;
+		display: flex;
+	}
+
+	.input-field{
+		height: 64px;
+		border-radius: 32px;
+		background: transparent;
+		appearance: none;
+		border: 0;
+		box-shadow: none;
+		padding: 0 24px;
+		color: #fff;
+		@include p-small;
+		width: 280px;
+
+		&::placeholder{
+			color: #BFBFBF;
+			opacity: 1;
+		}
+
+		&:hover,
+		&:focus{
+			outline: none;
+		}
+	}
+
+	.send-btn{
+		display: flex;
+		align-items: center;
+		height: 64px;
+		border-radius: 32px;
+		background: #fff;
+		transition: all $t;
+		padding: 0 24px;
+		@include h5;
+		color: $text-dark;
+		border: 1px solid $dark;
+
+		.btn-icon{
+			flex: none;
+			width: 24px;
+			height: 24px;
+			fill: currentcolor;
+			display: block;
+		}
+
+		&:hover,
+		&:focus{
+			outline: none;
+			background: $primary;
+			color: #fff;
+		}
+	}
+}

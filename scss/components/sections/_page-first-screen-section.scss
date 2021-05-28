@@ -1,0 +1,29 @@
+.page-first-screen-section{
+	padding: var(--vertical-paddings) 0 80px;
+
+	.section-caption{
+		.sc-title{
+			@include h2;
+
+			@media screen and (max-width: 575px){
+				text-transform: none;
+			}
+		}
+
+		.sc-subtitle{
+			max-width: 800px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 16px;
+		}
+
+		@media screen and (max-width: 767px){
+			.privacy &{
+				.sc-title{
+					@include h4;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}

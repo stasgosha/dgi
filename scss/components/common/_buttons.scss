@@ -1,0 +1,36 @@
+.btn{
+	@include h5;
+	text-align: center;
+	padding: 20px 68px;
+	min-height: 64px;
+	border-radius: 32px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: all $t;
+	cursor: pointer;
+	appearance: none;
+	white-space: nowrap;
+	border: 0;
+	color: #fff;
+	background: $primary;
+
+	&:hover,
+	&:focus{
+		background: #0d5ad0;
+		outline: none;
+	}
+
+	&.btn-light{
+		background: transparent;
+		border: 1px solid #DEDEDE;
+		color: $text-dark;
+
+		&:hover,
+		&:focus{
+			background: $primary;
+			border-color: $primary;
+			color: #fff;
+		}
+	}
+}

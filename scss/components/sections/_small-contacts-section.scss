@@ -1,0 +1,18 @@
+.small-contacts-section{
+	padding: 148px 0;
+	min-height: 480px;
+	display: flex;
+	align-items: center;
+	background: url(../img/backgrounds/small-contacts-bg.svg) no-repeat center center / cover;
+
+	.section-footer{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 40px;
+	}
+
+	@media screen and (max-width: 991px){
+		background-image: url(../img/backgrounds/small-contacts-mobile-bg.svg);
+	}
+}

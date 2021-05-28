@@ -1,0 +1,47 @@
+.careers-first-screen-sections{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-bottom: var(--vertical-paddings);
+
+	--headers-color: #fff;
+
+	@media screen and (min-width: 1025px){
+		background-attachment: fixed;
+	}
+
+	.page-first-screen-section{
+		color: rgba(#fff, .8);
+		
+		@media screen and (min-width: 992px){
+			padding-bottom: 20px;
+		}
+	}
+
+	.text-and-image-section{
+		padding-bottom: 0;
+		color: rgba(#fff, .6);
+
+		.section-inner{
+			align-items: flex-end;
+		}
+
+		@media screen and (min-width: 992px){
+			.section-image{
+				transform: translateY(60px);
+			}
+		}
+
+		.section-content{
+			padding-bottom: 80px;
+		}
+	}
+
+	.tags-list{
+		margin-top: 40px;
+	}
+
+	@media screen and (max-width: 991px){
+		margin-bottom: 0;
+	}
+}
